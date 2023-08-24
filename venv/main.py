@@ -52,6 +52,14 @@ killme -- deletes your character
 actions -- shows list of availible actions
 """
 
+actions = """
+Dumb shit -- just be an idiot
+Crime -- commit a crime
+Job -- get a job
+Love -- fine someone
+School -- get your dumbass an education
+"""
+
 # Gives player the option to restart
 print(Fore.RED + '!!WARNING: THIS WILL DELTE YOUR CURRENT CHARACTER')
 psc = input(Fore.YELLOW + "Would you like to make a new character? Y/N ")
@@ -71,7 +79,7 @@ while command != 'exit':
     info = open("/home/ben/coding/counter/venv/info/playerinfo", 'r')
     whoami = info.read()
 
-    command = str(input(Fore.WHITE + '>>>'))
+    command = str(input(Fore.WHITE + '>>> '))
     if command == 'commands':
         print(Fore.BLUE + commands)
     elif command == '>':
@@ -81,9 +89,12 @@ while command != 'exit':
         print(whoami)
     elif command == 'killme':
         yn = input('you sure')
-        if yn == Y or yn == y or yn == yes or yn == YES:
+        if yn == 'Y' or yn == 'y' or yn == 'yes' or yn == 'YES':
             print("Okay then....")
             info = open("/home/ben/coding/counter/venv/info/playerinfo", 'w')
-            info.write(' ')
+            info.write('Nobody lmao')
         else:
             print('make up your mind')
+    elif command == 'actions':
+        print(Fore.BLUE + actions)
+        action = input(Fore.WHITE + 'What would you like to do? ')
