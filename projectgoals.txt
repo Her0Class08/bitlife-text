@@ -1,0 +1,6 @@
+1) Base idea is a text based life simulator
+2) Should be able to open and close app with all data saved
+3) features:
+Ability to commit crimes
+Ability to date/marry
+Ability
