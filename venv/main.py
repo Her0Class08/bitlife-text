@@ -60,6 +60,11 @@ Love -- fine someone
 School -- get your dumbass an education
 """
 
+jobs = """
+Dishwasher -- why.....just why? | Sallary 50k | Education requirement 0|
+Waitress -- There you go you slut | Sallary 65k | Education requirement 1|
+"""
+
 # Gives player the option to restart
 print(Fore.RED + '!!WARNING: THIS WILL DELTE YOUR CURRENT CHARACTER')
 psc = input(Fore.YELLOW + "Would you like to make a new character? Y/N ")
@@ -98,3 +103,15 @@ while command != 'exit':
     elif command == 'actions':
         print(Fore.BLUE + actions)
         action = input(Fore.WHITE + 'What would you like to do? ')
+        if action == 'job':
+            print(Fore.WHITE + 'Good job')
+            print('Trying to be a productive member of society.')
+            print("You'll regret it.......")
+            print(Fore.BLUE + jobs)
+            job = input("Choose your poison... ")
+            info = open("/home/ben/coding/counter/venv/info/playerinfo", 'a')
+            info.write(job)
+            print(f"Well done. You are now a {job}")
+
+    else:
+        print(Fore.RED + 'not an option dumbfuck')
